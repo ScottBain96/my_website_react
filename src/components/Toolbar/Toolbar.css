@@ -5,7 +5,10 @@
     width: 100%;
     background: #197acf;
     height:90px;
+    
 }
+
+
 
 .toolbar_navigation {
 
@@ -17,6 +20,7 @@
 
 .toolbar_logo {
     margin-left: 1rem;
+     
 }
 .toolbar_logo a {
 
@@ -28,30 +32,60 @@
 
 .space {
 
-    flex: 1;
+    flex: 0.02;
 }
 
-.toolbar_navigation-items ul {
+.toolbar_navigation_start {
+
+    flex: 1;
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
 }
 
-.toolbar_navigation-items li {
+.toolbar_navigation_start ul {
+
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+
+}
+
+.toolbar_navigation_start li {
+
+    padding: 0 0.5rem;
+
+}
+
+.toolbar_navigation_start a {
+
+    color:white;
+    text-decoration: none;
+}
+
+.toolbar_navigation_end ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.toolbar_navigation_end li {
 
     padding: 0 0.5rem;
 }
 
-.toolbar_navigation-items a {
+.toolbar_navigation_end a {
 
     color:white;
     text-decoration: none;
 
 }
 
-.toolbar_navigation-items a:hover,
-.toolbar_navigation-items a:active {
+.toolbar_navigation_end a:hover,
+.toolbar_navigation_end a:active {
 
     color: #fa923f;
 }

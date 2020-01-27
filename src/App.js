@@ -5,6 +5,7 @@ import { Contact } from './Contact';
 import { About } from './About';
 import { NoMatch } from './NoMatch';
 import Toolbar from './components/Toolbar/Toolbar';
+import './App.css';
 
 
 

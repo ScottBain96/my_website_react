@@ -1,57 +1,6 @@
-.App {
-  text-align: center;
-}
+.content{
 
-
-.myDiv {
-  background-color: white;
-  min-height: 10vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width:1180px;
+  margin: 0 auto
   
- 
-}
-.myDiv2 {
- background-color:  #282c34;
- min-height: 500px;
- font-size: calc(10px + 2vmin);
- color: white;
- 
- 
-}
-
-nav{
-  width: 100%;
-  text-align: center;
-}
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
-  
-
-}
-
-li {
-  float: left;
-  
-}
-
-li a {  
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-/* Change the link color to #111 (black) on hover */
-li a:hover {
-  background-color: #111;
-}
+  }
