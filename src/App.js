@@ -9,7 +9,7 @@ function App() {
         <h1>My Second test</h1>
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload. This is a test
+          Edit <code>src/App.js</code> and save to reload.
         </p>
         <a
           className="App-link"
