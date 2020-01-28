@@ -44,11 +44,9 @@ backdropClickHandler = () => {
 
 
   render() {
-    let sideDrawer;
     let backDrop;
 
     if (this.state.sideDrawerOpen){
-      sideDrawer = <SideDrawer/>;
       backDrop = <Backdrop click={this.backdropClickHandler}/>
     }
     return (
@@ -58,7 +56,7 @@ backdropClickHandler = () => {
           <Router>
             <Toolbar drawerClickHandler={this.drawerToggleClickHandler} />
             {backDrop}
-            {sideDrawer}
+            <SideDrawer show={this.state.sideDrawerOpen}/>
             <section>
               <Switch>
                 <Route exact path="/" component={Home}/>
