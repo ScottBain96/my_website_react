@@ -11,7 +11,7 @@ const toolbar = props => (
         <nav className="toolbar_navigation">
             
             <div>
-             <DrawerToggleButton/>
+             <DrawerToggleButton click={props.drawerClickHandler}/>
             </div>
             <div className="toolbar_logo"> <img src={Logo}></img></div>
             <div className="space"></div>
