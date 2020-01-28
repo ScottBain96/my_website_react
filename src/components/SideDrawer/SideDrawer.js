@@ -12,9 +12,9 @@ const sideDrawer = props => {
 
     return (<nav className={drawerClasses}>
         <ul>
-            <li><Link to ="/search-job">Search Job</Link></li>
-            <li><Link to ="/post-a-job">Post a Job</Link></li>
-            <li><Link to ="/career-paths">Career Paths</Link></li>
+            <li><Link to ="/Searchjob">SearchJob</Link></li>
+            <li><Link to ="/Postjob">PostJob</Link></li>
+            <li><Link to ="/CareerPaths">CareerPaths</Link></li>
         </ul>
 
     </nav>)

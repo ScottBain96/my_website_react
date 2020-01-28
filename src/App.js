@@ -7,6 +7,9 @@ import { Home } from './Home';
 import { Contact } from './Contact';
 import { About } from './About';
 import { NoMatch } from './NoMatch';
+import { PostJob } from './PostJob';
+import { SearchJob } from './SearchJob';
+import { CareerPaths } from './CareerPaths';
 import sideDrawer from './components/SideDrawer/SideDrawer';
 import backdrop from './components/Backdrop/Backdrop';
 
@@ -62,6 +65,9 @@ backdropClickHandler = () => {
                 <Route exact path="/" component={Home}/>
                 <Route path="/about" component={About}/>
                 <Route path="/contact" component={Contact}/>
+                <Route path="/postjob" component={PostJob}/>
+                <Route path="/searchjob" component={SearchJob}/>
+                <Route path="/careerpaths" component={CareerPaths}/>
                 <Route component={NoMatch}/>
               </Switch>
             </section>

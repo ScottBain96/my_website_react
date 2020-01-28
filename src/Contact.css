@@ -6,3 +6,13 @@
     
     }
 
+
+    @media (max-width:768px){
+
+        .content {
+            width: 100%;
+            padding: 0 1em;
+        }
+    }
+
+    

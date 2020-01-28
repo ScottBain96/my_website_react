@@ -16,9 +16,9 @@ const toolbar = props => (
             <div className="toolbar_logo"> <img src={Logo}></img></div>
             <div className="space"></div>
             <div className="toolbar_navigation_start">
-                    <li><Link to ="/search-job">Search Job</Link></li>
-                    <li><Link to ="/post-a-job">Post a Job</Link></li>
-                    <li><Link to ="/career-paths">Career Paths</Link></li>
+                    <li><Link to ="/SearchJob">SearchJob</Link></li>
+                    <li><Link to ="/Postjob">PostJob</Link></li>
+                    <li><Link to ="/CareerPaths">CareerPaths</Link></li>
                 
 
             </div>
