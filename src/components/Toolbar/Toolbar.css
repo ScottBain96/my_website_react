@@ -18,17 +18,32 @@
     padding: 0 1rem;
 }
 
-.toolbar_logo {
+.toolbar_logo img{
     margin-left: 1rem;
+    margin: auto;
+    height: 50%;
+    width: 50%;
+   
+    
      
 }
-.toolbar_logo a {
 
-    color:white;
-    text-decoration: none;
-    font-size:1.5rem;
+@keyframes toolbar_logo_spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
 
-}
+  @media (prefers-reduced-motion: no-preference) {
+    .toolbar_logo img {
+      animation: toolbar_logo_spin infinite 15s linear;
+    }
+  }
+  
+
 
 .space {
 

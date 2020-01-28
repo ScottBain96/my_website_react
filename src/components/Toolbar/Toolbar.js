@@ -3,6 +3,7 @@ import { render } from '@testing-library/react';
 import './Toolbar.css';
 import DrawerToggleButton from '../SideDrawer/DrawerToggleButton';
 import { Link } from 'react-router-dom';
+import Logo from "./logo192.png";
 
 const toolbar = props => (
 
@@ -12,7 +13,8 @@ const toolbar = props => (
             <div>
              <DrawerToggleButton/>
             </div>
-            <div className="toolbar_logo"><a href="/">LOGO</a></div>
+            <div className="toolbar_logo"> <img src={Logo}></img></div>
+           
             <div className="space"></div>
             <div className="toolbar_navigation_start">
                     <li><Link to ="/search-job">Search Job</Link></li>
