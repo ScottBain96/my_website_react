@@ -2,12 +2,7 @@ import React from 'react';
 import { render } from '@testing-library/react';
 import './Toolbar.css';
 import DrawerToggleButton from '../SideDrawer/DrawerToggleButton';
-
-
-
-
-
-
+import { Link } from 'react-router-dom';
 
 const toolbar = props => (
 
@@ -20,24 +15,23 @@ const toolbar = props => (
             <div className="toolbar_logo"><a href="/">LOGO</a></div>
             <div className="space"></div>
             <div className="toolbar_navigation_start">
-                
-
-                    <li><a href="/search">Search Job</a></li>
-                    <li><a href="/post-a-job">Post a Job</a></li>
-                    <li><a href="/career-paths">Career Paths</a></li>
+                    <li><Link to ="/search-job">Search Job</Link></li>
+                    <li><Link to ="/post-a-job">Post a Job</Link></li>
+                    <li><Link to ="/career-paths">Career Paths</Link></li>
                 
 
             </div>
             <div className="toolbar_navigation_end">
 
                 <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/About">About</a></li>
-                    <li><a href="/Contact">Contact</a></li>
-                    <li><a href="/NoMatch">NoMatch</a></li>
+                    <li><Link to="/">Home</Link></li>
+                    <li><Link to="/About">About</Link></li>
+                    <li><Link to="/Contact">Contact</Link></li>
                 </ul>
                 
             </div>
+           
+
         </nav>
     </header>
 );
