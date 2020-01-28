@@ -1,10 +1,15 @@
 import React from 'react'
+import './Contact.css';
 
 export const Contact = () => (
-<div>
 
-    <h1>Contact Page</h1>
-    <p>This is my Contact text</p>
+
+<div className="content">
+
+    <h1>Contact Us!</h1>
+    <p>This website was created by:</p>
+    <p>Scott Bain</p>
+    <p>scott.bain.96@gmail.com</p>
 
 </div>
 

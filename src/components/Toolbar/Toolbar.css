@@ -18,14 +18,18 @@
     padding: 0 1rem;
 }
 
-.toolbar_logo img{
+.toolbar_logo{
     margin-left: 1rem;
-    margin: auto;
-    height: 50%;
-    width: 50%;
-   
+    width:90px;
+    height:90px;
+    overflow:hidden;
     
-     
+}
+
+.toolbar_logo img{
+
+    width: 100%;
+
 }
 
 @keyframes toolbar_logo_spin {

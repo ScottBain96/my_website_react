@@ -14,7 +14,6 @@ const toolbar = props => (
              <DrawerToggleButton/>
             </div>
             <div className="toolbar_logo"> <img src={Logo}></img></div>
-           
             <div className="space"></div>
             <div className="toolbar_navigation_start">
                     <li><Link to ="/search-job">Search Job</Link></li>
