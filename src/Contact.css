@@ -5,6 +5,11 @@
     padding-left: 100;
     
     }
+.content h1 {
+
+    margin-left: 50%;
+ 
+}
 
 
     @media (max-width:768px){
