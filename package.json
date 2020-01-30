@@ -1,7 +1,7 @@
 {
   "name": "my_website_react",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "homepage": "https://scottbain96.github.io/my_website_react",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
@@ -23,7 +23,7 @@
     "mongoose": "^5.8.10"
   },
   "scripts": {
-    "start": "node backend/server.js",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
