@@ -12,6 +12,13 @@ import { SearchJob } from './SearchJob';
 import { CareerPaths } from './CareerPaths';
 import sideDrawer from './components/SideDrawer/SideDrawer';
 import backdrop from './components/Backdrop/Backdrop';
+import "bootstrap/dist/css/bootstrap.min.css";
+import JobList from './components/job-list.component';
+import EditJob from './components/edit-job.component';
+import CreateJob from "./components/create-job.component";
+import CreateUser from './components/create-user.component';
+
+
 
 
 
@@ -60,17 +67,20 @@ backdropClickHandler = () => {
             <Toolbar drawerClickHandler={this.drawerToggleClickHandler} />
             {backDrop}
             <SideDrawer show={this.state.sideDrawerOpen}/>
+            
             <section>
               <Switch>
                 <Route exact path="/" component={Home}/>
                 <Route path="/about" component={About}/>
                 <Route path="/contact" component={Contact}/>
-                <Route path="/postjob" component={PostJob}/>
                 <Route path="/searchjob" component={SearchJob}/>
+                <Route path="/create" component={CreateJob} />
                 <Route path="/careerpaths" component={CareerPaths}/>
                 <Route component={NoMatch}/>
               </Switch>
             </section>
+         
+            
           </Router>
       </div>
  
