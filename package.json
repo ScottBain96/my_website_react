@@ -2,7 +2,7 @@
   "name": "my_website_react",
   "version": "0.1.0",
   "private": false,
-  "homepage": "https://scottbain96.github.io/my_website_react",
+  "homepage": "https://mywebsitereact.herokuapp.com/",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.4.0",
