@@ -71,9 +71,10 @@ backdropClickHandler = () => {
             <section>
               <Switch>
                 <Route exact path="/" component={Home}/>
-                <Route path="/about" component={About}/>
+                <Route path="/user" component={CreateUser}/>
                 <Route path="/contact" component={Contact}/>
-                <Route path="/searchjob" component={SearchJob}/>
+                <Route path="/searchjob" component={JobList}/>
+                <Route path="/edit/:id" component={EditJob} />
                 <Route path="/create" component={CreateJob} />
                 <Route path="/careerpaths" component={CareerPaths}/>
                 <Route component={NoMatch}/>

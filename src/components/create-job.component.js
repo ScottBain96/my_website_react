@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import DatePicker from 'react-datepicker';
+import axios from 'axios';
 import "react-datepicker/dist/react-datepicker.css";
 
 export default class CreateJob extends Component {
@@ -24,11 +25,17 @@ export default class CreateJob extends Component {
     //react lifecycle
     componentDidMount() {
 
-        this.setState({
+     axios.get('http://localhost:5000/users/')
+      .then(response => {
 
-            users: ['test user'],
-            username: 'test user'
-        })
+        if (response.data.length > 0){
+
+          this.setState({
+            users: response.data.map(user => user.username),
+            username: response.data[0].username
+          })
+        }
+      })
     }
 
 
@@ -60,22 +67,25 @@ export default class CreateJob extends Component {
           onSubmit(e) {
             e.preventDefault();
         
-            const exercise = {
+            const job = {
               username: this.state.username,
               description: this.state.description,
               duration: this.state.duration,
               date: this.state.date
             }
         
-            console.log(exercise);
-        window.location = '/';
+            console.log(job);
+            axios.post('http://localhost:5000/jobs/add', job)
+            .then(res => console.log(res.data));
+
+        window.location = '/SearchJob';
     }
 
     render() {
         return (
         <div className="content">
           <br/>
-          <h3>Post New Job</h3>
+          <h3>Post a new job</h3>
           <form onSubmit={this.onSubmit}>
             <div className="form-group"> 
               <label>Username: </label>
