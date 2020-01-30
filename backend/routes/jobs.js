@@ -13,14 +13,14 @@ router.route('/add').post((req, res ) => {
 
     const username = req.body.username;
     const description = req.body.description;
-    const duration = Number(req.body.duration);
+    const salary = Number(req.body.salary);
     const date = Date.parse(req.body.date);
 
     const newJob = new Job ({
 
         username,
         description,
-        duration,
+        salary,
         date,
     });
 
@@ -58,7 +58,7 @@ router.route('/update/:id').post((req, res ) => {
 
         job.username = req.body.username;
         job.description = req.body.description;
-        job.duration = Number(req.body.duration);
+        job.salary = Number(req.body.salary);
         job.date = Date.parse(req.body.date);
 
         job.save()

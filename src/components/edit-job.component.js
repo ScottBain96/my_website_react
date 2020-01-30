@@ -9,14 +9,14 @@ export default class EditJob extends Component {
 
     this.onChangeUsername = this.onChangeUsername.bind(this);
     this.onChangeDescription = this.onChangeDescription.bind(this);
-    this.onChangeDuration = this.onChangeDuration.bind(this);
+    this.onChangeSalary = this.onChangeSalary.bind(this);
     this.onChangeDate = this.onChangeDate.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
 
     this.state = {
       username: '',
       description: '',
-      duration: 0,
+      salary: 0,
       date: new Date(),
       users: []
     }
@@ -28,7 +28,7 @@ export default class EditJob extends Component {
         this.setState({
           username: response.data.username,
           description: response.data.description,
-          duration: response.data.duration,
+          salary: response.data.salary,
           date: new Date(response.data.date)
         })   
       })
@@ -62,9 +62,9 @@ export default class EditJob extends Component {
     })
   }
 
-  onChangeDuration(e) {
+  onChangeSalary(e) {
     this.setState({
-      duration: e.target.value
+      salary: e.target.value
     })
   }
 
@@ -80,7 +80,7 @@ export default class EditJob extends Component {
     const job = {
       username: this.state.username,
       description: this.state.description,
-      duration: this.state.duration,
+      salary: this.state.salary,
       date: this.state.date
     }
 
@@ -124,12 +124,12 @@ export default class EditJob extends Component {
               />
         </div>
         <div className="form-group">
-          <label>Duration (in minutes): </label>
+          <label>salary: </label>
           <input 
               type="text" 
               className="form-control"
-              value={this.state.duration}
-              onChange={this.onChangeDuration}
+              value={this.state.salary}
+              onChange={this.onChangeSalary}
               />
         </div>
         <div className="form-group">

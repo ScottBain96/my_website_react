@@ -9,14 +9,14 @@ export default class CreateJob extends Component {
   
       this.onChangeUsername = this.onChangeUsername.bind(this);
       this.onChangeDescription = this.onChangeDescription.bind(this);
-      this.onChangeDuration = this.onChangeDuration.bind(this);
+      this.onChangeSalary = this.onChangeSalary.bind(this);
       this.onChangeDate = this.onChangeDate.bind(this);
       this.onSubmit = this.onSubmit.bind(this);
   
       this.state = {
         username: '',
         description: '',
-        duration: 0,
+        salary: null,
         date: new Date(),
         users: []
       }
@@ -52,9 +52,9 @@ export default class CreateJob extends Component {
             })
           }
         
-          onChangeDuration(e) {
+          onChangeSalary(e) {
             this.setState({
-              duration: e.target.value
+              salary: e.target.value
             })
           }
         
@@ -70,15 +70,15 @@ export default class CreateJob extends Component {
             const job = {
               username: this.state.username,
               description: this.state.description,
-              duration: this.state.duration,
+              salary: this.state.salary,
               date: this.state.date
             }
         
             console.log(job);
             axios.post('http://localhost:5000/jobs/add', job)
             .then(res => console.log(res.data));
-
-        window.location = '/SearchJob';
+            window.location = '/SearchJob';
+      
     }
 
     render() {
@@ -114,16 +114,16 @@ export default class CreateJob extends Component {
                   />
             </div>
             <div className="form-group">
-              <label>Duration (in minutes): </label>
+              <label>Salary: </label>
               <input 
                   type="text" 
                   className="form-control"
-                  value={this.state.duration}
-                  onChange={this.onChangeDuration}
+                  value={this.state.salary}
+                  onChange={this.onChangeSalary}
                   />
             </div>
             <div className="form-group">
-              <label>Date: </label>
+              <label>Expiring Date: </label>
               <div>
                 <DatePicker
                   selected={this.state.date}
