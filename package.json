@@ -23,10 +23,11 @@
     "styled-components": "^5.0.0"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "node backend/server.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "webStart": "react-scripts start"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -42,5 +43,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "proxy": "http://localhost:5000"
 }
