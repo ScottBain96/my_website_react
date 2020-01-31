@@ -104,15 +104,20 @@ export default class CreateJob extends Component {
                   }
               </select>
             </div>
+            
             <div className="form-group"> 
               <label>Description: </label>
-              <input  type="text"
+              <textarea  type="text"
                   required
                   className="form-control"
                   value={this.state.description}
                   onChange={this.onChangeDescription}
+                  rows="10"
+                  
                   />
+                  
             </div>
+            
             <div className="form-group">
               <label>Salary: </label>
               <input 
@@ -120,6 +125,7 @@ export default class CreateJob extends Component {
                   className="form-control"
                   value={this.state.salary}
                   onChange={this.onChangeSalary}
+                  placeholder="£ per year"
                   />
             </div>
             <div className="form-group">
