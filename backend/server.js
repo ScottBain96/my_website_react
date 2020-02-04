@@ -1,5 +1,6 @@
 const express = require ('express');
 const cors = require ('cors');
+const path = require('path');
 const mongoose = require ('mongoose');
 require ('dotenv').config();
 
@@ -36,7 +37,35 @@ app.use((req, res, next) => {
         // move on
         next();
     }
+
+    
 });
+
+if(process.env.NODE_ENV === 'production') {
+    app.use((req, res, next) => {
+        if (req.header('x-forwarded-proto') !== 'https')
+            res.redirect(`https://${req.header('host')}${req.url}`)
+        else
+            next()
+    })
+}
+
+//server static filer fra react
+app.use(express.static(path.join(__dirname, '../build')));
+
+app.use((err, req, res, next) => {
+    if (err.name === 'UnauthorizedError') {
+        res.status(401).json({ error: err.message });
+    }
+});
+
+app.use((err, req, res, next) =>{
+    console.error(err.stack);
+    res.status(500).send({msg: 'Something Broke'})
+});
+
+
+
 
 
 
