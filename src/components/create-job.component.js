@@ -77,7 +77,7 @@ export default class CreateJob extends Component {
             console.log(job);
             axios.post('/jobs/add', job)
             .then(res => console.log(res.data));
-            window.location = '/SearchJob';
+            window.location = "/SearchJob";
       
     }
 
