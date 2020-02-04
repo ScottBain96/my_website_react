@@ -16,7 +16,7 @@ app.use (express.json());
 
 
 
-mongoose.connect('mongodb://dbuser:niels2502@85.184.163.71/shaka?authSource=admin',{useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true }
+mongoose.connect('mongodb+srv://dbUser:dbUser@cluster0-4xqf8.gcp.mongodb.net/test?retryWrites=true&w=majority',{useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true }
 );
 
 const connection = mongoose.connection; 
