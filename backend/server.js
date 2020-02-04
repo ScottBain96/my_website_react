@@ -2,6 +2,8 @@ const express = require ('express');
 const cors = require ('cors');
 const path = require('path');
 const mongoose = require ('mongoose');
+const bodyparser = require('body-parser');
+const compression = require('compression')
 require ('dotenv').config();
 
 
@@ -22,6 +24,15 @@ connection.once('open', () => {
 
     console.log("MongoDB connection established");
 })
+
+
+
+app.use(compression())
+app.use(bodyparser.urlencoded({
+    extended: true
+}));
+app.use(bodyparser.json());
+
 
 app.use((req, res, next) => {
     res.header("Access-Control-Allow-Origin", "*");
