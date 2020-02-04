@@ -23,7 +23,7 @@ export default class EditJob extends Component {
   }
 
   componentDidMount() {
-    axios.get('http://localhost:5000/jobs/'+this.props.match.params.id)
+    axios.get('/jobs/'+this.props.match.params.id)
       .then(response => {
         this.setState({
           username: response.data.username,
@@ -36,7 +36,7 @@ export default class EditJob extends Component {
         console.log(error);
       })
 
-    axios.get('http://localhost:5000/users/')
+    axios.get('/users/')
       .then(response => {
         if (response.data.length > 0) {
           this.setState({
@@ -86,7 +86,7 @@ export default class EditJob extends Component {
 
     console.log(job);
 
-    axios.post('http://localhost:5000/jobs/update/' + this.props.match.params.id, job)
+    axios.post('/jobs/update/' + this.props.match.params.id, job)
       .then(res => console.log(res.data));
 
       window.location = '/';

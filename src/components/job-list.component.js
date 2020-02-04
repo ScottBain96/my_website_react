@@ -24,7 +24,7 @@ export default class JobList extends Component {
   }
 
   componentDidMount() {
-    axios.get('http://localhost:5000/jobs/')
+    axios.get('/jobs/')
       .then(response => {
         this.setState({ jobs: response.data })
       })
@@ -34,7 +34,7 @@ export default class JobList extends Component {
   }
 
   deleteJob(id) {
-    axios.delete('http://localhost:5000/jobs/'+id)
+    axios.delete('/jobs/'+id)
       .then(response => { console.log(response.data)});
 
     this.setState({
