@@ -14,7 +14,7 @@ app.use (express.json());
 
 
 
-mongoose.connect('mongodb://dbUser:dbUser@cluster0-shard-00-00-4xqf8.gcp.mongodb.net:27017,cluster0-shard-00-01-4xqf8.gcp.mongodb.net:27017,cluster0-shard-00-02-4xqf8.gcp.mongodb.net:27017/test?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true&w=majority',{useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true }
+mongoose.connect('mongodb+srv://dbUser:dbUser@cluster0-4xqf8.gcp.mongodb.net/test?retryWrites=true&w=majority',{useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true }
 );
 
 const connection = mongoose.connection;
