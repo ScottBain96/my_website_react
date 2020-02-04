@@ -1,8 +1,7 @@
 {
   "name": "my_website_react",
   "version": "0.1.0",
-  "private": false,
-  "homepage": "https://mywebsitereact.herokuapp.com/",
+  "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.4.0",
@@ -12,7 +11,6 @@
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "gh-pages": "^2.2.0",
     "mongoose": "^5.8.10",
     "react": "^16.12.0",
     "react-bootstrap": "^1.0.0-beta.16",
@@ -23,7 +21,7 @@
     "styled-components": "^5.0.0"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "node backend/server.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
@@ -42,7 +40,8 @@
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
-    ]
+    ],
+    "proxy": "http://localhost:3001"
   }
   
 }
